@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Web-Proxy</title>
+    <meta charset="UTF-8">
+    <title>web-proxy(M.T.)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Web Proxy</h1>
-  <form action="/proxy" method="get">
-    <input type="text" name="url" placeholder="URLを入力してください" size="50">
-    <button type="submit">アクセス</button>
-  </form>
+    <div class="container">
+        <h1>web-proxy(M.T.)</h1>
+        <form id="proxyForm">
+            <input type="text" id="urlInput" placeholder="URLを入力してください" required>
+            <button type="submit">プロキシで開く</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 {
-    "name": "web-proxy",
+    "name": "web-proxy-M.T.",
     "version": "1.0.0",
-    "description": "Simple web proxy on Render",
+    "description": "学習",
     "main": "server.js",
     "scripts": {
       "start": "node server.js"
     },
     "dependencies": {
-      "axios": "^0.27.2",
-      "express": "^4.18.2"
+      "express": "^4.18.2",
+      "axios": "^1.4.0"
     }
   }
   
