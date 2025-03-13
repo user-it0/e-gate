@@ -4,19 +4,17 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// publicフォルダ内の静的ファイルを配信
+// publicディレクトリ内の静的ファイルを提供
 app.use(express.static('public'));
 
-// /fetch?url=… でリモートURLの内容を取得する
 app.get('/fetch', async (req, res) => {
     const targetUrl = req.query.url;
     if (!targetUrl) {
         return res.status(400).send('URLパラメータが必要です');
     }
     try {
-        // axiosで指定URLを取得（バイナリデータとして受信）
+        // 指定されたURLのコンテンツを取得
         const response = await axios.get(targetUrl, { responseType: 'arraybuffer' });
-        // 取得したコンテンツのContent-Typeをそのまま設定
         res.set('Content-Type', response.headers['content-type'] || 'text/html');
         res.send(response.data);
     } catch (error) {
@@ -26,5 +24,5 @@ app.get('/fetch', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });

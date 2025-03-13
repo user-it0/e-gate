@@ -1,7 +1,7 @@
 {
-    "name": "study-proxy-M.T.",
+    "name": "gakushuu-proxy-M.T.",
     "version": "1.0.0",
-    "description": "Onrender上で動作するシンプルな学習用ウェブプロキシー",
+    "description": "学習用ウェブプロキシ",
     "main": "server.js",
     "scripts": {
       "start": "node server.js"
