@@ -3,7 +3,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-const DATA_FILE = path.join(__dirname, '../../data.json'); // ルートの data.json を参照
+const DATA_FILE = path.join(__dirname, 'C:\Users\funct\OneDrive\ドキュメント\e-gate\data.json'); // ルートの data.json を参照
 
 // 永続データの初期化（data.json から読み込み）
 let data = { users: [], chatHistory: {} };
