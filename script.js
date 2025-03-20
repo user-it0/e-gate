@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Socket.IO 初期化（接続先URLはサーバーの実際のURLに合わせる）
+  // Socket.IO 初期化（接続先URLはサーバーのNetlify FunctionのURLに合わせる）
+  const socket = io();
 
   // グローバル変数
   let currentUser = null;
@@ -356,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function() {
       readStatus.innerText = msgObj.read ? "既読" : "未読";
       div.appendChild(readStatus);
     }
-    // 返信ボタンの追加（すべてのメッセージに対して）
+    // 返信ボタンの追加
     const replyBtn = document.createElement("span");
     replyBtn.className = "reply-button";
     replyBtn.innerText = "返信";
